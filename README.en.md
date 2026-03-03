@@ -19,7 +19,7 @@ Main operations:
 
 ## Repository Structure
 
-- `StaticPropertyDraphAnalysis_Plot.py`
+- `StaticPropertyGraphAnalysis_Plot.py`
   - Runner script with `#%%` cells
   - Includes examples for single-file run, multi-device aggregation, and overlay plotting
 - `STClass.py`
@@ -40,7 +40,7 @@ pip install pandas numpy matplotlib
 
 ## Quick Start
 
-1. Set CSV path to `file` or `file_dir` in `StaticPropertyDraphAnalysis_Plot.py`
+1. Set CSV path to `file` or `file_dir` in `StaticPropertyGraphAnalysis_Plot.py`
 2. Create object with `run_class(file)`
 3. Run `obj.data()` and/or `obj.graph(...)`
 
@@ -128,3 +128,4 @@ At minimum, `DeviceData.py` should contain:
 
 - VSCode + Python extension
 - `#%%` cell execution in Interactive Window
+
