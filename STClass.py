@@ -526,12 +526,3 @@ class ResultCollector:
                 print(f"未対応のクラス: {class_name}")
             print()
 
-if __name__ == "__main__":
-    # --- ファイルを指定 ---
-    file = "C:/Users/tombb/OneDrive - 筑波大学/測定データ/静特性/20250724/Onsemi_IdVd_Vgs15V_a01_175℃_1.csv"
-
-    # --- グラフ軸範囲 ---
-    xlim = None
-    ylim = None
-    obj = IdVd(file)
-    obj.data
