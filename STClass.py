@@ -299,7 +299,7 @@ class IdVg(Base, Common):    #Common経由でBase, ReadFileを継承
             Vth (float) : 閾値電圧[V]
         """
         mask = self.current > 1e-4    #ノイズ領域をフィルター(このあとnp.interpを使用するため)
-        #今は電流値でmaskをかけているけど活性面積が大きく異なるデバイス(DioMOSなど)を使用するときは電流密度を合わせる方が良いかも
+        
         filtered_current, filtered_voltage, filtered_density = self.mask_data(mask)
 
         if self.Jth is None:
@@ -354,7 +354,7 @@ class IfVf(Base, Common):    #Common経由でBase, ReadFileを継承
 
         if abs_mode:
             mask = self.current > 1e-2    #ノイズ領域をフィルター(このあとnp.interpを使用するため)
-            #今は電流値でmaskをかけているけど活性面積が大きく異なるデバイス(DioMOSなど)を使用するときは電流密度を合わせる方が良いかも
+            
             filtered_current, filtered_voltage, filtered_density = self.mask_data(mask)
 
             if self.Jth is None:
@@ -414,7 +414,7 @@ class BV(Base, Common):    #Common経由でBase, ReadFileを継承
             Vth (float) : 耐圧[V]
         """
         mask = self.current > 1e-7    #ノイズ領域をフィルター(このあとnp.interpを使用するため)
-        #今は電流値でmaskをかけているけど活性面積が大きく異なるデバイス(DioMOSなど)を使用するときは電流密度を合わせる方が良いかも
+        
         filtered_current, filtered_voltage, filtered_density = self.mask_data(mask)
 
         if self.Jth is None:
